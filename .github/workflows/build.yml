@@ -2,7 +2,6 @@ name: build
 on: workflow_dispatch
 jobs:
   build-services:
-    if: github.event.inputs.services == 'y'
     runs-on: ubuntu-latest
     steps:
       - name: Login to DockerHub
