@@ -8,7 +8,6 @@ set -o nounset
 __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Clean-ups
-rm -rf /usr/local/etc/php-fpm.d/*
 rm -rf ${__dir}/../cache/*
 
 # Populate configuration files

@@ -76,6 +76,7 @@ RUN set -xe \
     && make -C plugins/arArchivesCanadaPlugin \
     && npm run build \
     && rm -rf /atom/build
+    && rm -rf /usr/local/etc/php-fpm.d/*
 
 ENTRYPOINT ["docker/entrypoint.sh"]
 
