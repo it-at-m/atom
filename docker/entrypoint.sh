@@ -10,14 +10,6 @@ __dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # Clean-ups
 rm -rf ${__dir}/../cache/*
 
-# Populate configuration files
-php ${__dir}/bootstrap.php $@
-status=$?
-if [ $status -ne 0 ]; then
-    echo "bootstrap.php failed!"
-    exit $status
-fi
-
 case $1 in
     '')
         echo "Usage: (convenience shortcuts)"
